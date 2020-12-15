@@ -4,7 +4,7 @@ import re
 from sys import argv
 from typing import Optional
 
-from GokusBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from GokuBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater)
 # needed to dynamically load modules
