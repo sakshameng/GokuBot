@@ -135,20 +135,11 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/SaitamaRobot
-RUN git clone -b shiken https://github.com/sakshameng/GokuBot /root/GokuBot
-WORKDIR /root/GokuBot
+RUN git clone -b shiken https://github.com/AnimeKaizoku/SaitamaRobot /root/SaitamaRobot
+WORKDIR /root/SaitamaRobot
 
-#Copy config file to /root/GokuBot/GokuBot
-COPY ./GokuBot/sample_config.py ./GokuBot/config.py* /root/GokuBot/GokuBot/
-
-ENV PATH="/home/bot/bin:$PATH"
-
-# Install requirements
-RUN pip3 install -U -r requirements.txt
-
-# Starting Worker
-CMD ["python3","-m","GokuBot"]
-COPY ./GokuBot/sample_config.py ./GokuBot/config.py* /root/GokuBot/GokuBot/
+#Copy config file to /root/GokuBot/SaitamaRobot
+COPY ./GokuBot/sample_config.py ./SaitamaRobot/config.py* /root/GokuBot/GokuBot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -156,4 +147,13 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","GokuBot"]
+CMD ["python3","-m","SaitamaRobot"]
+COPY ./SaitamaRobot/sample_config.py ./SaitamaRobot/config.py* /root/SaitamaRobot/SaitamaRobot/
+
+ENV PATH="/home/bot/bin:$PATH"
+
+# Install requirements
+RUN pip3 install -U -r requirements.txt
+
+# Starting Worker
+CMD ["python3","-m","SaitamaRobot"]
