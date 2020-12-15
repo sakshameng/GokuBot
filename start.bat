@@ -1,4 +1,4 @@
 @echo off
-TITLE GokuBot
+TITLE SaitamaRobot
 :: Enables virtual env mode and then starts Goku
-env\scripts\activate.bat && py -m GokuBot
+env\scripts\activate.bat && py -m SaitamaRobot
