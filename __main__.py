@@ -210,17 +210,17 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🔔 Updates Channel",
-                             url="https://t.me/OnePunchUpdates")
+                             url="https://t.me/TGBotLab")
                      ],
                      [
                          InlineKeyboardButton(
                              text="🧾 Getting started guide",
-                             url="https://t.me/OnePunchUpdates/29")
+                             url="https://t.me/TGBotLab")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="🗄 Source code",
-                             url="https://github.com/AnimeKaizoku/SaitamaRobot")
+                             text="🗄 Owner",
+                             url="https://t.me/FaucetMaker")
                      ]]))
     else:
         update.effective_message.reply_text(
@@ -500,7 +500,7 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
-                "You can also donate to the person currently running me "
+                "You can also donate to the Coder - @FaucetMaker Or person currently running me "
                 "[here]({})".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN)
 
