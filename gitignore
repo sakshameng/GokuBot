@@ -1,7 +1,7 @@
-GokuBot/config.py
-GokuBot/*.session
-GokuBot/*.session-journal
-GokuBot/config.ini
+SaitamaRobot/config.py
+SaitamaRobot/*.session
+SaitamaRobot/*.session-journal
+SaitamaRobot/config.ini
 log.txt
 *.pyc
 .idea/
